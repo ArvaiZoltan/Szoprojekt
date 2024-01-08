@@ -22,10 +22,14 @@ toll.execute(""" INSERT INTO tanulók VALUES
     ('Víz Elek', 1995, 4.6) """)
 
 adatbázis.commit()
-
+listad=[]
 for adatok in toll.execute("SELECT név, szülév FROM tanulók ORDER BY szülév"):
     print (adatok)
-    
-    
+    listad.append(adatok)   
 adatbázis.close()
 
+vél=vélszám()
+print(vél)
+print (rekord(listad,0))
+print (adat(listad,0,1))
+print (adat(listad,vél,0))
