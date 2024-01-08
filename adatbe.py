@@ -4,8 +4,8 @@ import sqlite3
 adatbázis=sqlite3.connect("próba.db")
 
 toll=adatbázis.cursor()
-toll.execute("DROP TABLE IF EXISTS tanulók")
-toll.execute("CREATE TABLE tanulók(név, szülév, átlag)")
+#toll.execute("DROP TABLE IF EXISTS tanulók")
+toll.execute("CREATE TABLE IF NOT EXISTS tanulók(név, szülév, átlag)")
 
 nev=input('Mi legyen a név?')
 szülev=int(input('Szülév:'))
