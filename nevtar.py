@@ -1,4 +1,15 @@
 import sqlite3
+import random
+
+def vélszám():
+    véletlen=random.Random()
+    return véletlen.randrange(2)
+
+def rekord(list,x):
+    return list[x]
+
+def adat(list,x,y):
+    return list[x][y]
 
 adatbázis=sqlite3.connect("tanulók.db")
 
